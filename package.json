@@ -4,9 +4,8 @@
   "description": "The Met Museum landing page",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html --dist-dir dist",
-    "lint": "eslint . && stylelint \"**/*.{css,scss}\"",
-    "format": "prettier --write ."
+    "build": "parcel build index.html --dist-dir dist --public-url ./",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "keywords": [],
   "license": "GPL-3.0",
@@ -15,6 +14,7 @@
     "@parcel/transformer-sass": "^2.12.0",
     "eslint": "^8.57.0",
     "eslint-plugin-node": "^11.1.0",
+    "gh-pages": "^6.3.0",
     "parcel": "^2.12.0",
     "prettier": "^3.3.2",
     "stylelint": "^16.7.0",
