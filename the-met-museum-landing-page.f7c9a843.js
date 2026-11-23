@@ -1,0 +1,2 @@
+"use strict";function handleScrollLock(){var e=window.location.hash,o=document.body;"#menu"===e?o.style.overflow="hidden":o.style.overflow=""}handleScrollLock(),window.addEventListener("hashchange",handleScrollLock);var form=document.querySelector(".contacts__form");form.addEventListener("submit",function(e){e.preventDefault(),form.reset()});
+//# sourceMappingURL=the-met-museum-landing-page.f7c9a843.js.map
