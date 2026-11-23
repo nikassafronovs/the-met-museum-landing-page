@@ -1,27 +1,17 @@
 {
-  "name": "gulp-boilerplate",
+  "name": "the-met-museum-landing-page",
   "version": "1.0.0",
-  "description": "Frontend boilerplate based on gulp",
+  "description": "The Met Museum landing page",
   "scripts": {
-    "init": "mate-scripts init",
-    "start": "mate-scripts start",
-    "lint": "mate-scripts lint",
-    "test:only": "mate-scripts test",
-    "build": "mate-scripts build",
-    "deploy": "mate-scripts deploy",
-    "update": "mate-scripts update",
-    "postinstall": "npm run update",
-    "test": "npm run lint && npm run test:only"
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir dist",
+    "lint": "eslint . && stylelint \"**/*.{css,scss}\"",
+    "format": "prettier --write ."
   },
   "keywords": [],
-  "author": "Mate Academy",
   "license": "GPL-3.0",
   "devDependencies": {
     "@linthtml/linthtml": "^0.9.6",
-    "@mate-academy/eslint-config": "latest",
-    "@mate-academy/linthtml-config": "latest",
-    "@mate-academy/scripts": "^1.8.5",
-    "@mate-academy/stylelint-config": "latest",
     "@parcel/transformer-sass": "^2.12.0",
     "eslint": "^8.57.0",
     "eslint-plugin-node": "^11.1.0",
@@ -32,11 +22,5 @@
   },
   "browserslist": [
     "last 2 versions"
-  ],
-  "mateAcademy": {
-    "projectType": "layout",
-    "linters": {
-      "bem": false
-    }
-  }
+  ]
 }
